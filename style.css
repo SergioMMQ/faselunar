@@ -106,7 +106,7 @@ header a{
     
     background-image: linear-gradient(to bottom, rgb(0 0 0 / .55), rgb(0 0 0 / .5)), url(img/fondospa.jpg);
     color: aliceblue;
-    height: 300px;
+    height: -webkit-fill-available;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -164,4 +164,10 @@ footer section div{
 }
 .footer-left{
     padding-left: 30px;
+}
+
+@media (max-width:768px) {
+    .servicios {
+        display: inline-block;
+    }
 }
