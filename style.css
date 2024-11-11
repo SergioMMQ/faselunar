@@ -178,14 +178,28 @@ header a{
 
 .servicios{
     display: flex;
-    width: 80%;
+    width: 90%;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .servicios div{
     margin: 10px 30px;
 }
 .servicios p{
     text-align: justify;
+}
+.servicios span{
+    display: flex;
+}
+
+.servicios div div{
+    width: 250px;
+    height: 250px;
+    height:fit-content;
+    border-radius: 35px 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* footer */
