@@ -1,42 +1,3 @@
-/* font */
-
-.courier-prime-regular {
-    font-family: "Courier Prime", monospace;
-    font-weight: 400;
-    font-style: normal;
-    color: #2c1e0fd1;
-}
-
-.courier-prime-bold {
-    font-family: "Courier Prime", monospace;
-    font-weight: 700;
-    font-style: normal;
-    color: #2c1e0fd1;
-    size: 120px;
-}
-
-.courier-prime-regular-italic {
-    font-family: "Courier Prime", monospace;
-    font-style: italic;
-    color: #2c1e0fd1;
-}
-  
-.courier-prime-bold-italic {
-    font-family: "Courier Prime", monospace;
-    font-weight: 700;
-    font-style: italic;
-    color: #2c1e0fd1;
-}
-
-a:hover{
-    color: white;
-}
-
-a{    
-    color: #2c1e0fd1;
-    text-decoration: none;
-}
-
 /* html */
 html{
     padding: 0;
@@ -55,6 +16,7 @@ header{
     background-color: #4b3722d1;
     display: flex;
 }
+
 header nav{
     display: flex;
     min-width: -webkit-fill-available;
@@ -62,52 +24,32 @@ header nav{
     justify-content: space-between;
 }
 
+#img-img{
+    margin: 1rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.168);
+    border-radius: 60%;
+}
+
 header img{
     padding: 0 .5rem;
-    width: 80px;
-    border-radius: 50%;
-
-}
-header .img-img{
-    margin: .5rem 1.5rem;
-    background-color: rgba(0, 0, 0, 0.168);
-    border-radius: 50%;
-}
-
-header h1{
-    width: -webkit-fill-available;
-    text-align: center;
-    align-content: center;
-    text-align-last: left;
-}
-
-
-header section{
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    display: flex;
+    width: 90px;
+    border-radius: 100%;
 }
 
 header a{
     padding: 0 10px;
     font-size: 25px;    
 }
-.div-servicios{
-    text-align: center;
+
+header a:hover{
+    color: white;
 }
-.ver-servicios{
+
+header a{    
     color: #2c1e0fd1;
-    background-color: white;
-    border: .2em solid #2c1e0fd1;
-    padding: 7px;
-    border-radius: 40px;
+    text-decoration: none;
 }
-.ver-servicios:hover{
-    size: 1.5rem;
-    color: #2c1e0fd1;
-    padding: 10px;
-}
+
 /* main section */
 
 .main-principal{
@@ -123,13 +65,14 @@ header a{
     width: auto;
     height: 325px;
 }
+
 .main-principal p{
     font-size: large;
 }
 
 
 .main-div{
-    width: 70%;
+    width: 60%;
     height: auto;
     text-align: center;
 }
@@ -143,10 +86,6 @@ header a{
     flex-flow:row wrap;
 }
 
-.div-servicios{
-    height: 40px;
-}
-
 .servicios{
     display: flex;
     width: 90%;
@@ -154,6 +93,7 @@ header a{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 
 .servicios div{
     margin: 10px 30px;
@@ -163,9 +103,14 @@ header a{
 
 .servicios h3{
     text-transform:uppercase;
+    max-width: 220px;
 }
 
-.servicios div .imagen{
+.servicios div a{
+    text-align: -webkit-center;
+}
+
+.imagen{
     width: 200px;
     height: 200px;
     border-radius: 35px 15px;
@@ -174,17 +119,46 @@ header a{
 
 }
 
-.servicios div .imagen:hover{
+.imagen:hover{
     opacity: 0.5;
     border-radius: 5px 5px;
 }
+/* contactos */
+
+
+.contacto{
+    background: #936d44d1;
+    height: 150px;
+    color: white;   
+}
+
+.contacto h2{
+    text-align: center;
+    padding-top: 20px;
+    color:white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.contacto-izquierdo {
+    text-align: right;
+    width: 50%;
+}
+
+.contacto div div p{
+    margin-right: 10px;
+}
+
+.contacto-center{
+    align-content: center;
+    text-align:center;
+    
+}
 
 /* footer */
-
 footer{
     width: 100%;
     background-color: #4b3722d1;
-    display: flex;
 }
 
 footer section{
@@ -193,9 +167,6 @@ footer section{
     position: relative;
 }
 
-footer section div{
-    width: -webkit-fill-available;
-}
 
 .footer-rigth{
     text-align: right;
@@ -203,29 +174,16 @@ footer section div{
     
 }
 
-.footer-center{
-    align-content: center;
-    text-align:center;
-    
-}
-
 .footer-left{
     padding-left: 30px;
 }
 
-.contacto{
-    background: #936d44d1;
-    height: 150px;
-    color: white;   
-}
 
 @media (max-width:768px) {
     .servicios {
         display: inline-block;
     }
-    header nav{
-        display: inline-block;
-    }
+
     header section{
         width: auto;
         text-align: -webkit-rigth;
