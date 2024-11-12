@@ -49,38 +49,6 @@ body{
     margin: 0;
 }
 
-.div-button{
-    width: 20px;
-}
-.btn1{
-    color: white;
-    background-color: #2c1e0fd1;
-    border: none;
-    border-radius: 40px;
-}
-.btn2{
-    color: #2c1e0fd1;
-    background-color: white;
-    border: 2px solid #2c1e0fd1;
-    border-radius: 40px;
-}
-
-
-.btn1:hover{
-    color: white;
-    background-color: #170b00;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-}
-
-.btn2:hover{
-    color: #170b00;
-    background-color: white;
-    border: 2px solid #170b00;
-    border-radius: 40px;
-    cursor: pointer;
-}
 /* header */
 header{
     width: 100%;
@@ -106,7 +74,7 @@ header .img-img{
     border-radius: 50%;
 }
 
-header h3{
+header h1{
     width: -webkit-fill-available;
     text-align: center;
     align-content: center;
@@ -119,11 +87,11 @@ header section{
     text-align: center;
     align-items: center;
     display: flex;
-    padding-right: 30px;
 }
 
 header a{
     padding: 0 10px;
+    font-size: 25px;    
 }
 .div-servicios{
     text-align: center;
@@ -144,16 +112,19 @@ header a{
 
 .main-principal{
     display: flex;
-    
     align-items: center;
     justify-content: center;
-    
     background-image: linear-gradient(to bottom, rgb(0 0 0 / .80), rgb(0 0 0 / .5)), url(img/fondospa.jpg);
     color: aliceblue;
     height: -webkit-fill-available;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    width: auto;
+    height: 325px;
+}
+.main-principal p{
+    font-size: large;
 }
 
 
@@ -183,23 +154,29 @@ header a{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 .servicios div{
     margin: 10px 30px;
-}
-.servicios p{
-    text-align: justify;
-}
-.servicios span{
-    display: flex;
+    justify-items: center;
+    background-position: center;
 }
 
-.servicios div div{
-    width: 250px;
-    height: 250px;
-    height:fit-content;
+.servicios h3{
+    text-transform:uppercase;
+}
+
+.servicios div .imagen{
+    width: 200px;
+    height: 200px;
     border-radius: 35px 15px;
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+
+.servicios div .imagen:hover{
+    opacity: 0.5;
+    border-radius: 5px 5px;
 }
 
 /* footer */
