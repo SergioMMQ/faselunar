@@ -128,8 +128,8 @@ header a{
 
 .contacto{
     background: #936d44d1;
-    height: 150px;
-    color: white;   
+    height: 280px;
+    color: white;
 }
 
 .contacto h2{
@@ -140,19 +140,38 @@ header a{
     margin-bottom: 0px;
 }
 
-.contacto-izquierdo {
-    text-align: right;
+.contacto-texto {
     width: 50%;
+    text-align: -webkit-center;
 }
 
-.contacto div div p{
-    margin-right: 10px;
+.contacto-texto p{
+    width: 75%;
+    padding: 10px 5%;
+    text-align: justify;
 }
 
-.contacto-center{
-    align-content: center;
-    text-align:center;
-    
+.contacto-ancle{
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.contacto-ancle a{
+    margin: 5%;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #2c1e0fd1;
+    display: inline-block;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.contacto-ancle a:hover{
+    border-radius: 50%;
+    opacity: .8;
 }
 
 /* footer */
@@ -169,24 +188,57 @@ footer section{
 
 
 .footer-rigth{
+    width: 50%;
     text-align: right;
     padding-right: 30px;
-    
 }
 
 .footer-left{
+    width: 50%;
     padding-left: 30px;
 }
 
 
 @media (max-width:768px) {
+    .main-servicios{
+        display: flex;
+        justify-content: center;
+    }
+    .title-dos{
+        text-align: center;
+    }
     .servicios {
         display: inline-block;
+    }
+    .servicios div{
+        text-align: -webkit-center;
     }
 
     header section{
         width: auto;
         text-align: -webkit-rigth;
+    }
+
+    .contacto{
+        height: 550px;
+    }
+
+    .contacto-texto{
+        width: 90%;
+    }
+
+    .contacto div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-ancle{
+        flex-wrap: nowrap;
+    }
+
+    .contacto-ancle a{
+        
+        width: 25px;
     }
 
 }
