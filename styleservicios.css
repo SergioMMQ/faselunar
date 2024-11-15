@@ -23,6 +23,7 @@ header h1{
 
 h2{
     text-align: center;
+    margin: 45px 0 10px 0;
 }
 
 main{
@@ -32,6 +33,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 50px;
 }
 .tarjeta-1{
     display: flex;
@@ -64,6 +66,34 @@ main{
     margin: 20px;
     text-align: justify;
 }
+/* botones */
+
+button{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #f5b674d1;
+    border-radius: 50px;
+    background-color: #743e05cc;
+    color: #ffffffd1;
+}
+.regalar{
+    background-color: #f5b674d1;
+    border: none;
+}
+.comprar:hover{
+    position: relative;
+    width: 120px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.regalar:hover{
+    position: relative;
+    width: 120px;
+    font-size: large;
+    cursor: pointer;
+}
+
 
 /* contacto y footer */
 
@@ -170,7 +200,7 @@ footer section{
     }
 
     .tarjeta-1{
-        margin: 5px;
+        margin: 0 auto 60px auto;
     }
 
 }
