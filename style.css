@@ -13,44 +13,48 @@ body{
 /* header */
 header{
     width: 100%;
-    background-color: #4b3722d1;
+    height: 100px;
+    background: linear-gradient(to right, #743e05cc, #f5b674d1);
     display: flex;
 }
 
-header nav{
+header nav{    
     display: flex;
     min-width: -webkit-fill-available;
     position: relative;
     justify-content: space-between;
+    align-items: center;
 }
 
 #img-img{
-    margin: 1rem 1.5rem;
+    margin: 20px 20px;
     background-color: rgba(0, 0, 0, 0.168);
-    border-radius: 60%;
+    border-radius: 50%;
 }
 
 header img{
     padding: 0 .5rem;
     width: 90px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 header a{
-    padding: 0 10px;
     font-size: 25px;    
+    color: #2c1e0fd1;
+    text-decoration: none;
 }
 
 header a:hover{
     color: white;
 }
 
-header a{    
-    color: #2c1e0fd1;
-    text-decoration: none;
-}
-
 /* main section */
+
+main h2{
+    text-align: center;
+    padding-top: 30px;
+    padding: 0 15px;
+}
 
 .main-principal{
     display: flex;
@@ -78,7 +82,6 @@ header a{
 }
 
 /* servicios */
-
 .main-servicios{
     display: inline-flex;
     justify-content: center;
@@ -93,7 +96,6 @@ header a{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 
 .servicios div{
     margin: 10px 30px;
@@ -123,11 +125,10 @@ header a{
     opacity: 0.5;
     border-radius: 5px 5px;
 }
+
 /* contactos */
-
-
 .contacto{
-    background: #936d44d1;
+    background: #af8252d1;
     height: 280px;
     color: white;
 }
@@ -177,7 +178,7 @@ header a{
 /* footer */
 footer{
     width: 100%;
-    background-color: #4b3722d1;
+    background: linear-gradient(to right, #743e05cc, #f5b674d1);
 }
 
 footer section{
@@ -197,7 +198,6 @@ footer section{
     width: 50%;
     padding-left: 30px;
 }
-
 
 @media (max-width:768px) {
     .main-servicios{
