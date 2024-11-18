@@ -14,7 +14,8 @@ body{
 header{
     width: 100%;
     height: 100px;
-    background: linear-gradient(to right, #743e05cc, #f5b674d1);
+    /* background: linear-gradient(to right, #743e05cc, #f5b674d1); */
+    background-color: #cea579;
     display: flex;
 }
 
