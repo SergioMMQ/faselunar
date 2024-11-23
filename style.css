@@ -246,3 +246,129 @@ footer section{
     }
 
 }
+
+
+/*  */
+/* Estilos generales */
+
+.fondo{  
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.moon-container {
+    width: 100px;
+    display: flex;
+    position: relative;
+}
+
+.only-moon{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(249, 238, 176);
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.crater{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(194, 186, 142);
+    border-radius: 50px;
+    position: relative;
+    top: 20px;
+    left: 15px;
+    box-shadow: 0px 0px 15px black;
+    border: 1px solid rgba(197, 195, 195, 0.199);
+}
+
+.crater::before {
+    content: ""; /* Necesario para mostrar el pseudo-elemento */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(194, 186, 142);
+    border-radius: 50px;
+    position: absolute;
+    top: 60px; 
+    left: 25px; 
+    box-shadow: 0px 0px 15px black;
+    border: 1px solid rgba(197, 195, 195, 0.199);
+  }
+
+  .crater::after {
+    content: ""; 
+    width: 10px;
+    height: 10px;
+    background-color: rgb(194, 186, 142);
+    border-radius: 50px;
+    position: absolute;
+    top: 20px;  
+    left: 50px;  
+    box-shadow: 0px 0px 15px black;
+    border: 1px solid rgba(197, 195, 195, 0.199);
+  }
+
+  .crater-2{
+    width: 5px;
+    height: 5px;
+    background-color: rgb(194, 186, 142);
+    border-radius: 50px;
+    position: relative;
+    top: 0px;
+    left: 50px;
+    box-shadow: 0px 0px 15px black;
+    border: 1px solid rgba(197, 195, 195, 0.199);
+}
+
+.crater-2::before {
+    content: ""; /* Necesario para mostrar el pseudo-elemento */
+    width: 5px;
+    height: 5px;
+    background-color: rgb(194, 186, 142);
+    border-radius: 50px;
+    position: absolute;
+    top: 50px; 
+    left: -50px; 
+    box-shadow: 0px 0px 15px black;
+    border: 1px solid rgba(197, 195, 195, 0.199);
+  }
+
+  .crater-2::after {
+    content: ""; 
+    width: 5px;
+    height: 5px;
+    background-color: rgb(194, 186, 142);
+    border-radius: 50px;
+    position: absolute;
+    top: 55px;  
+    left: 30px;  
+    box-shadow: 0px 0px 15px black;
+    border: 1px solid rgba(197, 195, 195, 0.199);
+  }
+
+
+/* Sombra de la luna */
+.shadow {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cea579; /* Sombra oscura */
+    position: absolute;
+    animation: shadowCycle 20s infinite linear; /* Ciclo de la sombra de izquierda a derecha */
+    clip-path: circle(50% at 50% 50%); /* Inicialmente, la sombra está recortada al tamaño de la luna */
+}
+
+/* Animación de la sombra de la luna que se mueve de izquierda a derecha */
+@keyframes shadowCycle {
+    0% {
+        transform: translateX(-110%); /* Sombra al principio en la izquierda */
+    }
+    50% {
+        transform: translateX(0); /* Sombra en el centro, cubriendo la luna */
+    }
+    100% {
+        transform: translateX(110%); /* Sombra a la derecha, fuera de la luna */
+    }
+}
