@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Zapatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylez.css">
+    <link rel="stylesheet" href="stylezdescuento.css">
+
+    <script>
+        function enviarWhatsApp(producto, id) {
+            const checkboxes = document.querySelectorAll(`#${id} input[type='checkbox']:checked`);
+            let tallas = Array.from(checkboxes).map(cb => cb.value).join(', ');
+            if (tallas.length > 0) {
+                tallas = ` con las tallas: ${tallas}`;
+            }
+            const mensaje = `Hola buenos días, estoy interesado por el producto ${producto}${tallas}`;
+            const numero = '5514054014';
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+<header>
+    Tienda de Zapatos
+</header>
+<div class="info">
+    <p>¡Oferta exclusiva! Obtén estos zapatos con descuentos especiales.</p>
+    <p>Características:</p>
+    <ul>
+        <li>Alta calidad</li>
+        <li>Variedad de tallas</li>
+        <li>Envíos a toda la CDMX</li>
+        <li>Métodos de pago variados</li>
+    </ul>
+    <p>Pregunta por nuestras promociones y descuentos adicionales.</p>
+</div>
+<div class="container">
+    
+    <div class="product promocion35" id="productoA">
+        <img src="imgzapatos/1.jpg" alt="Zapato STRIPER STROM HI ">
+        <h3>STRIPER STROM HI</h3>
+        <p>Tallas disponibles:</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="20 CM"> 20 CM</label>
+            <label><input type="checkbox" value="24 CM"> 24 CM</label>
+            <!-- <label><input type="checkbox" value="26 CM" disabled> 26 CM (Agotado)</label> -->
+        </div>
+        <h4>Precio:</h4>
+        <p>$ 1 808 MXN</p>
+        <a class="btn" onclick="enviarWhatsApp('Zapato STRIPER STROM HI', 'productoA')">Comprar</a>
+    </div>
+
+    <div class="product promocion50" id="productoB">
+        <img src="imgzapatos/2.jpg" alt="Zapato Sperry Cup II Boat">
+        <h3>Sperry Cup II Boat</h3>
+        <p>Tallas disponibles:</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="19 CM"> 19 CM </label>
+            <label><input type="checkbox" value="21 CM"> 21 CM </label>
+        </div>
+        <h4>Precio:</h4>
+        <p>$ 1979 MXN</p>
+        <a class="btn" onclick="enviarWhatsApp('Sperry Cup II Boat', 'productoB')">Comprar</a>
+    </div>
+
+    <div class="product promocion30" id="productoC">
+        <img src="imgzapatos/3.jpg" alt="Bowline Storm Ta/Brown">
+        <h3>Bowline Storm Ta/Brown</h3>
+        <p>Tallas disponibles:</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="19 CM"> 19 CM </label>
+        </div>
+        <h4>Precio:</h4>
+        <p>$ 1 499 MXN</p>
+        <a class="btn" onclick="enviarWhatsApp('Bowline Storm Ta/Brown', 'productoC')">Comprar</a>
+    </div>
+
+    
+    <div class="product promocion50" id="productoD">
+        <img src="imgzapatos/small1.jpg" alt="small1" style="width: 60px; position: absolute; top: 1px; right: 1px;">
+        <img src="imgzapatos/4.jpg" alt="Bowline Storm Ta/Brown">
+        <h3>Bowline Storm Ta/Brown</h3>
+        <p>Tallas disponibles:</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="19 CM"> 19 CM </label>
+        </div>
+        <h4>Precio:</h4>
+        <p>$ 2 399 MXN</p>
+        <a class="btn" onclick="enviarWhatsApp('Bowline Storm Ta/Brown', 'productoD')">Comprar</a>
+    </div>
+
+    <div class="product promocion50" id="productoE">
+        <img src="imgzapatos/5.jpg" alt="Bowline Storm Ta/Brown">
+        <h3>MOCASINES CON AGUJETA</h3>
+        <p>Tallas disponibles:</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="19.5 CM"> 19.5 CM </label>
+        </div>
+        <h4>Precio:</h4>
+        <p>$ 1 759 MXN</p>
+        <a class="btn" onclick="enviarWhatsApp('Bowline Storm Ta/Brown', 'productoE')">Comprar</a>
+    </div>
+
+    <div class="product promocion30" id="productoF">
+        <img src="imgzapatos/6.jpg" alt="ICESTORM CRIB BLUSH">
+        <h3>ICESTORM CRIB BLUSH</h3>
+        <p>Tallas disponibles:</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="7.5 CM"> 7.5 CM </label>
+        </div>
+        <h4>Precio:</h4>
+        <p>$ 1 399 MXN</p>
+        <a class="btn" onclick="enviarWhatsApp('ICESTORM CRIB BLUSH', 'productoF')">Comprar</a>
+    </div>
+
+    <div class="product promocion35" id="productoG">
+        <img src="imgzapatos/7.jpg" alt="Striper Strong Hi Black">
+        <h3>Striper Strong Hi Black</h3>
+        <p>Tallas disponibles:</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="18.5 CM"> 18.5 CM </label>
+        </div>
+        <h4>Precio:</h4>
+        <p>$ 1 992 MXN</p>
+        <a class="btn" onclick="enviarWhatsApp('Striper Strong Hi Black', 'productoG')">Comprar</a>
+    </div>
+
+</div>
+</body>
+</html>
