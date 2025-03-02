@@ -1,6 +1,6 @@
 
     .promocion5::before {
-        content: '5% de descuento';
+        content: '-5% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -14,7 +14,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion10::before {
-        content: '10% de descuento';
+        content: '-10% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -28,7 +28,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion15::before {
-        content: '15% de descuento';
+        content: '-15% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -42,7 +42,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion20::before {
-        content: '20% de descuento';
+        content: '-20% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -56,7 +56,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion25::before {
-        content: '25% de descuento';
+        content: '-25% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -70,7 +70,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion30::before {
-        content: '30% de descuento';
+        content: '-30% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -84,7 +84,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion35::before {
-        content: '35% de descuento';
+        content: '-35% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -98,7 +98,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion40::before {
-        content: '40% de descuento';
+        content: '-40% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -112,7 +112,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion45::before {
-        content: '45% de descuento';
+        content: '-45% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
@@ -126,7 +126,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     .promocion50::before {
-        content: '50% de descuento';
+        content: '-50% de descuento';
         background-color: #ff4d4d;
         color: white;
         padding: 5px;
