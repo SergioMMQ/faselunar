@@ -5,6 +5,7 @@ html{
 }
 
 body{
+    background-color: rgb(212, 212, 212);
     background-attachment: fixed;
     padding: 0;
     margin: 0;
@@ -14,7 +15,7 @@ body{
 header{
     width: 100%;
     height: 100px;
-    /* background: linear-gradient(to right, #743e05cc, #f5b674d1); */
+    background: linear-gradient(to right, #743e05cc, #f5b674d1);
     background-color: #cea579;
     display: flex;
 }
@@ -39,17 +40,19 @@ header img{
 
 header a{
     font-size: 25px;    
-    color: #2c1e0fd1;
+    color: rgb(77, 42, 0);
     text-decoration: none;
 }
 
 header a:hover{
-    color: white;
+    text-shadow: 3px 1px 20px black;
 }
 
 /* main section */
 
 main h2{
+    
+    color: #8b7400;
     text-align: center;
     padding-top: 30px;
     padding: 0 15px;
@@ -206,6 +209,10 @@ footer section{
         display: flex;
         justify-content: center;
     }
+    .main-principal p{
+        text-align: justify;
+        font-size: small;
+    }
     .title-dos{
         text-align: center;
     }
@@ -345,7 +352,7 @@ footer section{
     top: 55px;  
     left: 30px;  
     box-shadow: 0px 0px 15px black;
-    border: 1px solid rgba(197, 195, 195, 0.199);
+    border: 1px solid rgba(109, 108, 108, 0.043);
   }
 
 
@@ -354,7 +361,7 @@ footer section{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #cea579; /* Sombra oscura */
+    background-color: #000000c9; /* Sombra oscura */
     position: absolute;
     animation: shadowCycle 20s infinite linear; /* Ciclo de la sombra de izquierda a derecha */
     clip-path: circle(50% at 50% 50%); /* Inicialmente, la sombra está recortada al tamaño de la luna */

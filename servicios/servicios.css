@@ -14,7 +14,6 @@ header{
     background: linear-gradient(to right, #743e05cc, #f5b674d1);
     display: flex;    
     justify-content: center;
-
 }
 
 header h1{
@@ -29,13 +28,17 @@ h2{
 main{
     min-height: 630px;
 }
+
 .contenedor-tarjetas{
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: center; */
     justify-content: space-evenly;
     margin-bottom: 50px;
 }
+
 .tarjeta-1{
+    /* margin: 30px; */
     display: flex;
     width: 260px;
     height: 260px;
@@ -54,8 +57,6 @@ main{
     border-radius: 15px 50px;
 }
 
-
-
 .tarjeta h3{
     height: 25px;
     margin: 30px 20px;
@@ -66,8 +67,12 @@ main{
     margin: 20px;
     text-align: justify;
 }
-/* botones */
 
+.tarjeta div a{
+    display: contents;
+}
+
+/* botones */
 button{
     width: 100px;
     height: 30px;
@@ -76,21 +81,23 @@ button{
     background-color: #743e05cc;
     color: #ffffffd1;
 }
+
 .regalar{
     background-color: #f5b674d1;
     border: none;
 }
+
 .comprar:hover{
     position: relative;
-    width: 120px;
-    font-size: large;
+    /* width: 120px; */
+    /* font-size: large; */
     cursor: pointer;
 }
 
 .regalar:hover{
     position: relative;
-    width: 120px;
-    font-size: large;
+    /* width: 120px; */
+    /* font-size: large; */
     cursor: pointer;
 }
 
