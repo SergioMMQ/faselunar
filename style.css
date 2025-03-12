@@ -379,3 +379,17 @@ footer section{
         transform: translateX(110%); /* Sombra a la derecha, fuera de la luna */
     }
 }
+
+/* Tienda de zapatos */
+.floating-shoe {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.floating-shoe:hover {
+    transform: translateY(-10px);
+}
