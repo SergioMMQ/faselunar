@@ -83,42 +83,52 @@
       </a>
     </nav>
     
-        <div class="filter-container">
-            <button onclick="filtrarPorTalla('19 CM')">19 CM</button>
-            <button onclick="filtrarPorTalla('20 CM')">20 CM</button>
-            <button onclick="filtrarPorTalla('21 CM')">21 CM</button>
-            <button onclick="filtrarPorTalla('24 CM')">24 CM</button>
-            <button onclick="resetearFiltro()">Mostrar Todo</button>
-        </div>
-        <!-- Script de Filtro -->
-        <script>
-            function filtrarPorTalla(talla) {
-                let productos = document.querySelectorAll(".product");
-            
-                productos.forEach(producto => {
-                    let tallas = producto.getAttribute("data-tallas").split(",");
-                    if (tallas.includes(talla)) {
-                        producto.style.display = "block"; // Mostrar si tiene la talla
-                    } else {
-                        producto.style.display = "none"; // Ocultar si no la tiene
-                    }
-                });
-            }
-            
-            function resetearFiltro() {
-                document.querySelectorAll(".product").forEach(producto => {
-                    producto.style.display = "block"; // Mostrar todos los productos
-                });
-            }
-        </script>
     <div class="info">
       <p>🎉 ¡Oferta Exclusiva! 🎉</p>
       <p>💥 Descuentos especiales en nuestra colección de zapatos.</p>
       <p>🔥 Promoción Especial: ¡50% de descuento en productos seleccionados!</p>
       <p>💳 Meses sin intereses en tarjetas participantes. ¡No dejes pasar esta oportunidad!</p>
     </div>
+
+        <!-- Filtros de Rango de Tallas -->
+    <div class="filter-container" style="display: contents;">
+        <label for="minTalla">Talla mínima en CM:</label>
+        <input type="number" id="minTalla" step="0.5" placeholder="Ej. 20">
+
+        <label for="maxTalla">Talla máxima en CM:</label>
+        <input type="number" id="maxTalla" step="0.5" placeholder="Ej. 24">
+        
+        <button onclick="filtrarPorRango()">Filtrar</button>
+        <button onclick="resetearFiltro()">Mostrar Todo</button>
+    </div>
+
+    <script>
+        function filtrarPorRango() {
+            let minTalla = parseFloat(document.getElementById("minTalla").value);
+            let maxTalla = parseFloat(document.getElementById("maxTalla").value);
+            let productos = document.querySelectorAll(".product");
+        
+            productos.forEach(producto => {
+                let tallas = producto.getAttribute("data-tallas").split(",").map(Number);
+                let mostrar = tallas.some(talla => talla >= minTalla && talla <= maxTalla);
+        
+                producto.style.display = mostrar ? "block" : "none";
+            });
+        }
+        
+        function resetearFiltro() {
+            document.querySelectorAll(".product").forEach(producto => {
+                producto.style.display = "block"; // Mostrar todos los productos
+            });
+        
+            document.getElementById("minTalla").value = "";
+            document.getElementById("maxTalla").value = "";
+        }
+    </script>
+
     <div class="container">
-      <div class="product promocion35" id="productoA" data-tallas="20 CM,24 CM">
+
+      <div class="product promocion35" id="productoA" data-tallas="20,24">
         <img src="imgzapatos/1.jpg" alt="Zapato STRIPER STROM HI TAN " />
         <h3>STRIPER STROM HI TAN</h3>
         <p>Tallas disponibles:</p>
@@ -138,7 +148,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoB" data-tallas="19 CM,21 CM,21.5 CM,24.5 CM">
+      <div class="product promocion50" id="productoB" data-tallas="19,21,21.5,24.5">
         <img src="imgzapatos/2.jpg" alt="Zapato Sperry Cup II Boat" />
         <h3>SPERRY CUP II BOAT</h3>
         <p>Tallas disponibles:</p>
@@ -162,7 +172,7 @@
         >
       </div>
 
-      <div class="product promocion30" id="productoC" data-tallas="19 CM">
+      <div class="product promocion30" id="productoC" data-tallas="19">
         <img src="imgzapatos/3.jpg" alt="Bowline Storm Ta/Brown" />
         <h3>BOWLINE STORM TA/BROWN</h3>
         <p>Tallas disponibles:</p>
@@ -181,7 +191,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoD" data-tallas="22.5 CM,23.5 CM,24.5 CM,26 CM,27 CM">
+      <div class="product promocion50" id="productoD" data-tallas="22.5,23.5,24.5,26,27">
         <img src="imgzapatos/small1.jpg" alt="small1" style="width: 60px; position: absolute; top: 1px; right: 1px"/>
         <img src="imgzapatos/4.jpg" alt="BAHAMA 2 PLT PURPLE" />
         <h3>BAHAMA 2 PLT PURPLE</h3>
@@ -208,7 +218,7 @@
         >
       </div>
 
-      <div class="product promocion40" id="productoE" data-tallas="19.5 CM">
+      <div class="product promocion40" id="productoE" data-tallas="19.5">
         <img src="imgzapatos/small7.jpg" alt="small1" style="width: 60px; position: absolute; top: 1px; right: 1px"/>
         <img src="imgzapatos/5.jpg" alt="FAIRWATER PLUSHWAVE GR/NV" />
         <h3>FAIRWATER PLUSHWAVE GR/NV</h3>
@@ -229,7 +239,7 @@
         >
       </div>
 
-      <div class="product promocion30" id="productoF">
+      <div class="product promocion30" id="productoF" data-tallas="">
         <img src="imgzapatos/6.jpg" alt="ICESTORM CRIB BLUSH" />
         <h3>ICESTORM CRIB BLUSH</h3>
         <p>Tallas disponibles:</p>
@@ -249,7 +259,7 @@
         >
       </div>
 
-      <div class="product promocion35" id="productoG" data-tallas="18.5 CM">
+      <div class="product promocion35" id="productoG" data-tallas="18.5">
         <img src="imgzapatos/7.jpg" alt="Striper Strong Hi Black" />
         <h3>STRIPER STRONG HI BLACK</h3>
         <p>Tallas disponibles:</p>
@@ -269,7 +279,7 @@
         >
       </div>
 
-      <div class="product promocion35" id="productoH" data-tallas="23 CM">
+      <div class="product promocion35" id="productoH" data-tallas="23">
         <img src="imgzapatos/8.jpg" alt="A/0 2-EYE PIN PERF WHITE" />
         <h3>A/0 2-EYE PIN PERF WHITE</h3>
         <p>Tallas disponibles:</p>
@@ -289,7 +299,7 @@
         >
       </div>
 
-      <div class="product promocion30" id="productoI" data-tallas="25 CM">
+      <div class="product promocion30" id="productoI" data-tallas="25">
         <img src="imgzapatos/9.jpg" alt="TOP SHOP SIDER BEIGE" />
         <h3>TOP SHOP SIDER BEIGE</h3>
         <p>Tallas disponibles:</p>
@@ -308,7 +318,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoJ" data-tallas="25 CM">
+      <div class="product promocion50" id="productoJ" data-tallas="25">
         <img src="imgzapatos/10.jpg" alt="REBECCA MINKOFF ZEBRA" />
         <h3>REBECCA MINKOFF ZEBRA</h3>
         <p>Tallas disponibles:</p>
@@ -328,7 +338,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoK" data-tallas="16 CM">
+      <div class="product promocion50" id="productoK" data-tallas="16">
         <img src="imgzapatos/11.jpg" alt="SPINNAKER WSHBL JR NAVY" />
         <h3>SPINNAKER WSHBL JR NAVY</h3>
         <p>Tallas disponibles:</p>
@@ -348,7 +358,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoL" data-tallas="23 CM,25 CM,25.5 CM,26CM">
+      <div class="product promocion50" id="productoL" data-tallas="23,25,25.5,26">
         <img
           src="imgzapatos/small2.jpg"
           alt="small2"
@@ -378,7 +388,7 @@
         >
       </div>
 
-      <div class="product promocion10" id="productoM" data-tallas="27 CM">
+      <div class="product promocion10" id="productoM" data-tallas="27">
         <img src="imgzapatos/13.jpg" alt="SOLETIDE ECO LTHR TAN" />
         <h3>SOLETIDE ECO LTHR TAN</h3>
         <p>Tallas disponibles:</p>
@@ -397,7 +407,7 @@
         >
       </div>
 
-      <div class="product promocion40" id="productoN" data-tallas="25.5 CM">
+      <div class="product promocion40" id="productoN" data-tallas="25.5">
         <img src="imgzapatos/14.jpg" alt="BAHAMA 3 PLAT LTHR WHTE" />
         <h3>BAHAMA 3 PLAT LTHR WHTE</h3>
         <p>Tallas disponibles:</p>
@@ -417,7 +427,7 @@
         >
       </div>
 
-      <div class="product promocion10" id="productoO" data-tallas="24.5 CM">
+      <div class="product promocion10" id="productoO" data-tallas="24.5">
         <img src="imgzapatos/15.jpg" alt="COVETIDE WSHBLE CORAL" />
         <h3>COVETIDE WSHBLE CORAL</h3>
         <p>Tallas disponibles:</p>
@@ -437,7 +447,7 @@
         >
       </div>
 
-      <div class="product promocion10" id="productoP" data-tallas="25 CM">
+      <div class="product promocion10" id="productoP" data-tallas="25">
         <img src="imgzapatos/16.jpg" alt="CREST VIBE BAJA BLUE" />
         <h3>CREST VIBE BAJA BLUE</h3>
         <p>Tallas disponibles:</p>
@@ -457,7 +467,7 @@
         >
       </div>
 
-      <div class="product" id="productoQ" data-tallas="24 CM">
+      <div class="product" id="productoQ" data-tallas="24">
         <img
           src="imgzapatos/17.jpg"
           alt="REBECCA MINKOFF A/0 2-EYE SPORT BLK"
@@ -480,7 +490,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoR" data-tallas="25 CM">
+      <div class="product promocion50" id="productoR" data-tallas="25">
         <img
           src="imgzapatos/small3.jpg"
           alt="small1"
@@ -505,7 +515,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoS" data-tallas="25 CM,26 CM">
+      <div class="product promocion50" id="productoS" data-tallas="25,26">
         <img
           src="imgzapatos/small4.jpg"
           alt="small1"
@@ -531,7 +541,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoT" data-tallas="22 CM,22.5 CM,23.5 CM">
+      <div class="product promocion50" id="productoT" data-tallas="22,22.5,23.5">
         <img
           src="imgzapatos/small5.jpg"
           alt="small1"
@@ -559,7 +569,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoU" data-tallas="26 CM">
+      <div class="product promocion50" id="productoU" data-tallas="26">
         <img
           src="imgzapatos/small6.jpg"
           alt="small1"
@@ -583,7 +593,7 @@
         >
       </div>
 
-      <div class="product promocion20" id="productoV" data-tallas="25 CM">
+      <div class="product promocion20" id="productoV" data-tallas="25">
         <img src="imgzapatos/21.jpg" alt="A/O FLOAT PURPLE/NAVY" />
         <h3>A/O FLOAT PURPLE/NAVY</h3>
         <p>Tallas disponibles:</p>
@@ -602,7 +612,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoW" data-tallas="12 CM,15 CM,16 CM,17 CM,18 CM">
+      <div class="product promocion50" id="productoW" data-tallas="12,15,16,17,18">
         <img src="imgzapatos/22.jpg" alt="SPERRY CUP II BTJR BROWN" />
         <h3>SPERRY CUP II BTJR BROWN</h3>
         <p>Tallas disponibles:</p>
@@ -625,7 +635,7 @@
         >
       </div>
 
-      <div class="product promocion50" id="productoX" data-tallas="12 CM,12.5 CM">
+      <div class="product promocion50" id="productoX" data-tallas="12,12.5">
         <img src="imgzapatos/23.jpg" alt="SPINNAKER WASHABLE JR TAN" />
         <h3>SPINNAKER WASHABLE JR TAN</h3>
         <p>Tallas disponibles:</p>
@@ -646,7 +656,7 @@
         >
       </div>
 
-      <div class="product promocion40" id="productoY" data-tallas="12 CM">
+      <div class="product promocion40" id="productoY" data-tallas="12">
         <img src="imgzapatos/24.jpg" alt="BOWFINJR/NAVY" />
         <h3>BOWFINJR/NAVY</h3>
         <p>Tallas disponibles:</p>

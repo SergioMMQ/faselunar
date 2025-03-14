@@ -214,14 +214,14 @@ input[type="checkbox"]:disabled + label {
     padding: 10px;
     margin: 5px;
     border: none;
-    background-color: #00bcd4;
+    background-color: #b38d76;
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .filter-container button:hover {
-    background-color: #008c9e;
+    background-color: #ac4c10;
 }
 
 .product {
