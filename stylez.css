@@ -203,3 +203,27 @@ input[type="checkbox"]:disabled + label {
 .footer a:hover {
     color: #ff9800;
 }
+
+
+.filter-container {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.filter-container button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #00bcd4;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-container button:hover {
+    background-color: #008c9e;
+}
+
+.product {
+    display: block; /* Se oculta si no cumple con el filtro */
+}
