@@ -20,9 +20,10 @@ nav {
   text-align: -webkit-right;
   color: #90753f;
 }
-nav a {
+nav a i {
   text-decoration: none;
-  padding-right: 15px;
+  padding: 15px;
+
 }
 nav a:link,
 :visited,
@@ -37,7 +38,6 @@ nav a:hover {
 .info {
   /* background: #ccb89ab7; */
   background-color: #b38d76;
-
   padding: 15px;
   margin: 20px;
   border-radius: 10px;
