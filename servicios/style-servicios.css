@@ -349,6 +349,7 @@ footer section {
   }
   .menu-toggle {
     display: block;
+    display: flex;
   }
 
   .sidebar {
