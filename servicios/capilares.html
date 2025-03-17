@@ -1,83 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPILARES</title>
-    <link rel="stylesheet" href="servicios.css">    
-    <link rel="icon" type="image/x-icon" href="/faselunar/img/spa.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CORPORALES</title>
+    <link rel="stylesheet" href="style-servicios.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@1,400..900&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 </head>
 <body>
     <header>
         <div>
-            <h1>TRATAMIENTOS CAPILARES</h1>
+            <h1>TRATAMIENTOS CORPORALES</h1>
         </div>
     </header>
-    <main>
-        <h2>Cuidado y Estética del Cabello</h2>
-        <div class="contenedor-tarjetas">
-            <div class="tarjeta-1">
-                <div class="tarjeta">
-                    <h3>Hidratación Profunda</h3>
-                    <h4>
-                        Tratamiento intensivo para suavidad y brillo.  
-                    </h4>
-                    <h5>
-                        Duración: 45 minutos
-                        <br>
-                        Precio: $500 MXN
-                    </h5>
-                    <div>
-                        <a href="https://wa.me/525514054014?text=Me%20gustaría%20comprar%20el%20servicio">
-                            <button class="comprar">
-                                COMPRAR
-                            </button>    
-                        </a>
-                        <a href="https://wa.me/525514054014?text=Me%20gustaría%20regalar%20el%20servicio">
-                            <button class="regalar">
-                                REGALAR
-                            </button>
-                        </a>
+    <button class="menu-toggle" style="display: flex; align-items: center">
+        &#9776;
+        <p style="font-size: 15px; margin-left: 5px">Servicios</p>
+    </button>
+    <section style="display: flex">
+        <nav class="sidebar">
+            <ul class="menu">
+                <h2>Cuidado y Estética del Cabello</h2>
+                <li>
+                    <a
+                    href="#"
+                    class="menu-link active"
+                    data-target="hidratacion-profunda"
+                    >- Hidratación Profunda</a
+                    >
+                </li>
+                <li>
+                    <a
+                    href="#"
+                    class="menu-link"
+                    data-target="crecimiento-fortalecimiento"
+                    >- Crecimiento y Fortalecimiento</a
+                    >
+                </li>
+                <li>
+                    <a
+                    href="#"
+                    class="menu-link"
+                    data-target="purificacion-restauracion"
+                    >- Purificación y Restauración del Cuero Cabelludo</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="boton-home">
+                <a href="https://www.faselunar.com.mx/" class="boton home">
+                    <i class="fas fa-spa"></i> Inicio
+                </a>
+            </div>
+            <div id="hidratacion-profunda" class="content active">
+                <h2>🌿 Hidratación Profunda para tu Cabello 🌿</h2>
+                <div class="galeria">
+                    <div class="tarjeta-1">
+                        <img src="img/cabello hidratado.png" alt="Cabello hidratado" />
                     </div>
+                    <!-- <img src="resultado2.jpg" alt="Tratamiento en proceso" /> -->
+                    <!-- <img src="spa-ambiente.jpg" alt="Ambiente del spa" /> -->
+                </div>
+                <br />
+                <h3>
+                    ✨ Restaura, nutre y revitaliza tu melena con una experiencia de spa
+                    capilar. ✨
+                </h3>
+                
+                <h4>🌸 La Experiencia Incluye:</h4>
+                <ul>
+                    <li>✔️ Lavado con shampoo detox para eliminar impurezas</li>
+                    <li>✔️ Masaje capilar relajante con aceites naturales</li>
+                    <li>
+                        ✔️ Aplicación de mascarilla hidratante con ingredientes premium
+                    </li>
+                    <li>✔️ Vaporización o gorro térmico para máxima absorción</li>
+                    <li>✔️ Sellado de cutícula con sérum nutritivo</li>
+                    <li>✔️ Peinado ligero para un look radiante</li>
+                </ul>
+                
+                <h4>🌿 Beneficios de nuestro Tratamiento:</h4>
+                <ul>
+                    <li>💧 Hidratación intensa para un cabello suave y manejable</li>
+                    <li>✨ Brillo y vitalidad desde la raíz hasta las puntas</li>
+                    <li>🛡 Protección contra el frizz y daño por calor</li>
+                    <li>💆‍♀️ Relajación total mientras cuidamos tu cabello</li>
+                </ul>
+                
+                <h4>📍 Agenda tu cita y regálate un momento de bienestar 📍</h4>
+                
+                <div class="botones">
+                    <a
+                    href="https://wa.me/+525514054014"
+                    class="boton info"
+                    target="_blank"
+                    >WhatsApp</a
+                    >
                 </div>
             </div>
-        </div>
-    </main>
+            
+            <div id="crecimiento-fortalecimiento" class="content">
+                <h2>Crecimiento y Fortalecimiento</h2>
+                <p>Lista de servicios que ofrecemos.</p>
+            </div>
+            
+            <div id="purificacion-restauracion" class="content">
+                <h2>Purificación y Restauración del Cuero Cabelludo</h2>
+                <p>Lista de servicios que ofrecemos.</p>
+            </div>
+        </main>
+    </section>
+    
     <section class="contacto">
         <h2>CONTACTO</h2>
-        <div style="display: flex;align-items: center;">
+        <div class="contacto-div" style="display: flex; align-items: center">
             <div class="contacto-texto">
-                <h3>¡Estamos aquí para ayudarte!</h3>
-                <p>
-                En Fase Lunar, nos apasiona brindarte soluciones a medida para hacer crecer tu negocio. Nos especializamos en tecnología innovadora y un servicio personalizado que se adapta a tus necesidades. ¡No dudes en ponerte en contacto con nosotros para conocer cómo podemos apoyar tus proyectos!
-                ¡Hablemos!
-                </p>
+                <h3>¡Agenda tu cita hoy!</h3>
             </div>
             <div class="contacto-ancle">
                 <a href="https://www.facebook.com/profile.php?id=100085005052825">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/faselunar.mk?igsh=Znp5djlna2Rncmdj">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/525514054014?text=Me%20gustaria%20recibir%20más%20información" target="_blank" class="social-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
+                <a
+                href="https://www.instagram.com/faselunar.mk?igsh=Znp5djlna2Rncmdj"
+                >
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a
+            href="https://wa.me/525514054014?text=Me%20gustaria%20recibir%20más%20información"
+            target="_blank"
+            class="social-icon"
+            >
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</div>
+</section>
+<footer>
+    <section>
+        <div class="footer-left">
+            <h4>Todos los derechos reservados</h4>
         </div>
-    </section>
-    <footer >
-        <section>
-            <div class="footer-left">
-                <h4>Todos los derechos reservados</h4>
-            </div>
-            <div class="footer-rigth">
-                <a href="https://sergiommq.github.io/portafolio/" style="text-decoration: none;color:black;">
-                    <h5>Creado por Quetzalcode</h5>
-                </a>
-            </div>
-        </section>
-    </footer>
+        <div class="footer-rigth">
+            <a
+            href="https://sergiommq.github.io/portafolio/"
+            style="text-decoration: none; color: black"
+            >
+            <h5>Creado por Quetzalcode</h5>
+        </a>
+    </div>
+</section>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
