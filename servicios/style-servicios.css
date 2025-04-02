@@ -102,7 +102,7 @@ h2 {
   text-align: center;
 }
 
-#hidratacion-profunda {
+.content {
   background: white;
   border-radius: 15px;
   max-width: 600px;
@@ -113,30 +113,30 @@ h2 {
   color: #4a4a4a;
 }
 
-#hidratacion-profunda h2 {
+.content h2 {
   font-size: 24px;
   color: #a67c52;
   margin-bottom: 10px;
 }
 
-#hidratacion-profunda h3 {
+.content h3 {
   font-size: 18px;
   color: #6d4c41;
   margin-bottom: 20px;
 }
 
-#hidratacion-profunda h4 {
+.content h4 {
   font-size: 20px;
   color: #8c6b52;
   margin-top: 20px;
 }
 
-#hidratacion-profunda ul {
+.content ul {
   list-style: none;
   padding: 0;
 }
 
-#hidratacion-profunda ul li {
+.content ul li {
   font-size: 16px;
   padding: 4px 0 0 35px;
   display: flex;
@@ -144,24 +144,24 @@ h2 {
   gap: 8px;
 }
 
-#hidratacion-profunda ul li::before {
+.content ul li::before {
   color: #a67c52;
   font-weight: bold;
 }
 
-#hidratacion-profunda p {
+.content p {
   font-size: 16px;
   margin-top: 15px;
   font-weight: bold;
 }
 
-#hidratacion-profunda a {
+.content a {
   color: #522a00;
   text-decoration: none;
   font-weight: bold;
 }
 
-#hidratacion-profunda a:hover {
+.content a:hover {
   text-decoration: underline;
   color: #6d4c41;
 }
