@@ -227,3 +227,12 @@ input[type="checkbox"]:disabled + label {
 .product {
     display: block; /* Se oculta si no cumple con el filtro */
 }
+
+.agotado {
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  backdrop-filter: blur(100px);
+  background: rgba(255, 0, 0, .2);
+  top: 1px;
+}
